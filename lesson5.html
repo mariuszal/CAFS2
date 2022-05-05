@@ -15,7 +15,7 @@
         <input type="email" name="email" value=""><br>
         <label for="rent">Tipas</label>
         <select name="rent" id="rent"><br>
-            <option value="-">pasirinkti t/p</option>
+            <option disabled selected>pasirinkti t/p</option>
             <option value="car">automobilio nuoma</option>
             <option value="bike">dviracio nuoma</option>
             <option value="scooter">paspirtuko nuoma</option>
@@ -26,12 +26,33 @@
         <input type="date" name="date_to"><br>
         <label for="city">Miestas</label>
         <select name="city" id="city"><br>
-            <option value="-">miestas</option>
+            <option disabled selected>miestas</option>
             <option value="vilnius">Vilnius</option>
             <option value="kaunas">Kaunas</option>
             <option value="klaipeda">Klaipeda</option>
         </select><br>
+        <input type="radio" name="" id=""><br>
+        <input type="radio" name="" id="" disabled><br>
+        <input type="radio" name="" id=""><br>
         <button>submit</button>
+    </form>
+    <form action="" method="POST">    
+        <fieldset>
+            <legend>pasirinkti mygtuka</legend>
+            <input type="radio" name="name" id="1">
+            <input type="radio" name="name" id="1">
+            <input type="radio" name="name" id="1">
+            <input type="text" name="name" id="name">
+        </fieldset>
+        <fieldset>
+            <legend>pasirinkti kita mygtuka</legend>
+            <input type="radio" name="name2" id="">
+            <input type="radio" name="name2" id="">
+            <input type="radio" name="name2" id="">
+            <input type="radio" name="name2" id="" disabled>
+            <input type="radio" name="name2" id="" disabled>
+        </fieldset>
+        <button>siusti</button>
     </form>
 </body>
 </html>
