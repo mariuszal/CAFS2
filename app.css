@@ -63,9 +63,11 @@
 }
 
 /****************** menu5 */
+.menu5 ul {
+    list-style-type: none;
+}
 .menu5 li {
     display: inline;
-    list-style-type: none;
     width: 200px;
     height: 25px;
     border: 1px solid blue;
