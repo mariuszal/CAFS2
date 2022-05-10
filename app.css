@@ -1,6 +1,5 @@
 .menu a:hover {
     color: red;
-
 }
 
 .menu2 li {
@@ -9,7 +8,6 @@
     height: 25px;
     border: 1px solid blue;
     margin-top: 5px;
-   
 }
 .menu2 a {
     margin-left: 5px;
@@ -18,4 +16,29 @@
 }
 .menu2 a:hover {
     font-weight: bold;
+}
+
+
+.menu3 ul {
+    list-style-type: none;
+}
+.menu3 li {
+    width: 200px;
+    height: 25px;
+    background-color: brown;
+    border: 1px solid whitesmoke;
+    margin-top: 5px; 
+}
+.menu3 a {
+    color: whitesmoke;
+    margin-left: 5px;
+    text-decoration: none;
+}
+.menu3 li:hover {
+    background-color: seagreen;
+    border: 1px solid brown;
+    color: brown;
+}
+.menu3 a:hover {
+    font-weight: bold;  
 }
