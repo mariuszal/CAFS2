@@ -61,3 +61,25 @@
 .menu4 a:hover {
     color: red;
 }
+
+/****************** menu5 */
+.menu5 li {
+    display: inline;
+    list-style-type: none;
+    width: 200px;
+    height: 25px;
+    border: 1px solid blue;
+    margin: 5px;
+}
+.menu5 li:hover {
+    background-color: blue;
+}
+.menu5 a {
+    margin: 5px;
+    color: blue;
+    text-decoration: none;
+}
+.menu5 a:hover {
+    color: white;
+    background-color: blue;
+}
