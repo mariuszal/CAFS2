@@ -1,4 +1,21 @@
-a:hover {
+.menu a:hover {
     color: red;
 
+}
+
+.menu2 li {
+    list-style-type: none;
+    width: 200px;
+    height: 25px;
+    border: 1px solid blue;
+    margin-top: 5px;
+   
+}
+.menu2 a {
+    margin-left: 5px;
+    color: blue;
+    text-decoration: none;
+}
+.menu2 a:hover {
+    font-weight: bold;
 }
