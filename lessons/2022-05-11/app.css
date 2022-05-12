@@ -1,0 +1,44 @@
+/* body {
+    background-color: red;
+} */
+/* 
+@media only screen and (max-width: 785px) {
+    div {
+        width: 100%;
+        height: 250px;
+        background-color: blue;
+    }
+}
+@media only screen and (min-width: 786px){
+    div {
+        width: 50%;
+        height: 350px;
+        background-color: yellow;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    div {
+        width: 33.33%;
+        height: 450px;
+        background-color: green;
+    }
+} */
+
+.container {
+    border: 1px solid red;
+    padding: 5px;
+    display: flex;
+}
+.child .child-custom{
+    border: 1px solid green;
+    /* height: 150px; */
+    margin-bottom: 5px;
+}
+
+.child-custom {
+    padding: 15px;
+    height: 100%;
+    border: 1px solid blue;
+}
+
+
