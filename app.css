@@ -64,6 +64,9 @@
     .yellow {
        width: 45%;
    }
+   .green {
+       height: 450px;
+   }
    .blue {
        width: 30%;
        flex-direction: row;
