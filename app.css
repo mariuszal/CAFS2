@@ -33,7 +33,7 @@
     flex-grow: 1;
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1200px){
+@media only screen and (min-width: 768px) and (max-width: 1024px){
     .container2 {
         flex-wrap: wrap;
         flex-direction: row;
@@ -55,7 +55,7 @@
         flex-direction: row;
     }
 }
-@media only screen and (min-width: 1200px) { 
+@media only screen and (min-width: 1024px) { 
    .container2 {
        flex-wrap: wrap;
        flex-direction: row;
@@ -70,13 +70,13 @@
        flex-grow: 1;
    }
    .silver, .silver1 {
-    width: 20%;
-    height: 120px;
-    margin: 3px;
-    background-color: silver;
-    flex-grow: 1;
-    flex-direction: row;
-}
+        width: 20%;
+        height: 120px;
+        margin: 3px;
+        background-color: silver;
+        flex-grow: 1;
+        flex-direction: row;
+    }
 }
 
 
