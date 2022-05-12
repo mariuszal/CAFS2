@@ -1,86 +1,31 @@
-.container {
-    /* border: 1px solid red; */
-    padding: 5px;
-    display: flex;
-    flex-direction: column;
-}
-.yellow {
-    background-color: orange;
-    width: 100%;
-    height: 50px;
-    margin: 3px;
-    flex-grow: 1;
-}
-.green {
-    background-color: greenyellow;
-    width: 100%;
-    height: 100px;
-    margin: 3px;
-    flex-grow: 1;
-}
-.blue {
-    background-color: lightskyblue;
-    width: 100%;
-    height: 150px;
-    margin: 3px;
-    flex-grow: 1;
-}
-.silver {
-    background-color: silver;
-    width: 100%;
-    height: 50px;
-    margin: 3px;
-    flex-grow: 1;
-}
-
-@media only screen and (min-width: 768px) and (max-width: 1024px){
-    .container2 {
-        flex-wrap: wrap;
-        flex-direction: row;
-        display: flex;
+.menu5 ul {
+        list-style-type: none;
     }
-    .green {
-        height: 250px;
+.menu5 li {
+        display: block;
+        width: 100%;
+        height: 25px;
+        border: 1px solid blue;
+        margin: 5px;
     }
-    .blue {
-        height: 100px;
+.menu5 li:hover {
+        background-color: blue;
+    }
+.menu5 a {
+        margin: 5px;
+        color: blue;
+        text-decoration: none;
+    }
+.menu5 a:hover {
+        color: white;
+        background-color: blue;
     }
 
-    .silver, .silver1 {
-        width: 40%;
-        height: 100px;
-        margin: 3px;
-        background-color: silver;
-        flex-grow: 1;
-        flex-direction: row;
+@media only screen and (min-width: 768px){
+    
+    .menu5 li {
+        display: inline;
+        width: 200px;
     }
+    
 }
-@media only screen and (min-width: 1024px) { 
-   .container2 {
-       flex-wrap: wrap;
-       flex-direction: row;
-       display: flex;
-   }
-    .yellow {
-       width: 45%;
-   }
-   .green {
-       height: 450px;
-   }
-   .blue {
-       width: 30%;
-       flex-direction: row;
-       flex-grow: 1;
-   }
-   .silver, .silver1 {
-        width: 20%;
-        height: 120px;
-        margin: 3px;
-        background-color: silver;
-        flex-grow: 1;
-        flex-direction: row;
-    }
-}
-
-
-
