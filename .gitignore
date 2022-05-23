@@ -1,3 +1,5 @@
 .idea/
 new.html
-!.gitignore
+node_modules
+mix-manifest.json
+mix.js.map
