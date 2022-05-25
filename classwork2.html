@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>classwork 14</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <script>
+      function randomNumber() {
+        return Math.random() * 11;
+      }
+      
+      // let array = [
+      //   randomNumber().toFixed(2),
+      //   randomNumber().toFixed(2),
+      //   randomNumber().toFixed(2),
+      //   randomNumber().toFixed(2),
+      //   randomNumber().toFixed(2)
+      // ]
+
+      let a = randomNumber().toFixed(2),
+          b = randomNumber().toFixed(2),
+          c = randomNumber().toFixed(2),
+          d = randomNumber().toFixed(2),
+          e = randomNumber().toFixed(2);
+
+      console.log(a + ", " + b + ", " + c + ", " + d + ", " + e + "." );
+
+      let max = Math.max(a,b,c,d,e);
+      let min = Math.min(a,b,c,d,e);
+
+      console.log('didziausia verte:' + max.toFixed(2));
+      console.log('maziausia verte: ' + min.toFixed(2));
+
+    </script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script> -->
+  <!-- <script src="app.js"></script> -->
+  </body>
+</html>
