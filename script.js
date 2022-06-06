@@ -175,6 +175,9 @@ function filteredByLetter(arr, letter) {
 }
 console.log(filteredByLetter(citiesOfLithuania, 'v'));
 
+
+
+
 // 12. Parašykite penkias funkcijas:
 // - calculateValue()
 // - addition()
@@ -182,8 +185,59 @@ console.log(filteredByLetter(citiesOfLithuania, 'v'));
 // - multiplication()
 // - division()
 
-// Pagridinė funkcija bus calculateValue(num1, num2, action), kuri priims tris argumentus: a) num1 - skaičius;b) num2 - skaičius; c) action - (matematinis veiksmas kaip string pvz. “substraction”). Būtina, kad funckija validuotų ar num1 ir num2 yra skaičiai.
+// Pagridinė funkcija bus calculateValue(num1, num2, action), 
+// kuri priims tris argumentus:
+//  a) num1 - skaičius;
+// b) num2 - skaičius; 
+// c) action - (matematinis veiksmas kaip string pvz. “substraction”). 
+// Būtina, kad funckija validuotų ar num1 ir num2 yra skaičiai.
 
-// Priklausomai trečio argumento (action), su pirmais dviem (num1 ir num2) bus atliekamas matematinis veiksmas ir kviečiama viena iš keturių funkcijų, kurios priims du argumentus (num1 ir num2) ir grąžins atlikta veiksmą.
+// Priklausomai trečio argumento (action), su pirmais dviem (num1 ir num2) 
+// bus atliekamas matematinis veiksmas ir kviečiama viena iš keturių funkcijų, 
+// kurios priims du argumentus (num1 ir num2) ir grąžins atlikta veiksmą.
 
-// Pastaba: šios funkcijos: addition(), subtraction(), multiplication(), division() turi būti kviečiamas calculateValue() viduje, o aprašomos išorėje.
+// Pastaba: šios funkcijos: addition(), subtraction(), multiplication(), 
+// division() turi būti kviečiamas calculateValue() viduje, o aprašomos išorėje.
+function addition (num1, num2) {
+  return num1 + num2;
+}
+
+function subtraction (num1, num2) {
+  return num1 - num2;
+}
+
+function multiplication (num1, num2) {
+  return num1 * num2;
+}
+
+function division (num1, num2) {
+  return num1 / num2;
+}
+
+function calculateValue (num1, num2, action) {
+  if (Number.isInteger(num1) || Number.isInteger(num2)) {
+
+    switch (action) {
+        case 'addition':
+            return addition (num1, num2);
+            break;
+        case 'subtraction':
+            return subtraction (num1, num2);
+            break;
+        case 'multiplication':
+            return multiplication (num1, num2);
+            break;
+        case 'division':
+            return division (num1, num2);
+            break;    
+        default:
+            return false;
+    }
+  } else {
+    return false;
+  }  
+}
+console.log(calculateValue(2, 4, 'addition'));
+console.log(calculateValue(4, 5, 'subtraction'));
+console.log(calculateValue(8, 4, 'multiplication'));
+console.log(calculateValue(6, 2, 'division'));
