@@ -3,6 +3,7 @@ let numbers = [5, 1, 7, 2, -9, 8, 2, 7, 9, 4, -5, 2, -6, -4, 6];
 
 // 1. Parašykite funkciją arrDoubled, kuri sukuria ir grąžina naują masyvą, 
 // kurio elementai padauginti iš 2;
+// return num.map(function(value) { return value * 2; });
 function arrDoubled(num){
   let doubledArr = [];
   for (let i = 0; i < num.length; i++) {
@@ -136,7 +137,7 @@ console.log(findNumbers(arr2));
 // Iškvietus funkciją checkIfAllSmaller(arr1, 5) rezultata bus: False
 let arr1 = [2, 7, 6, 9, 5];
 function checkIfAllSmaller(arr, max) {
-  let r;
+  let r = true;
   arr.forEach(arg => {
     if (arg < max) { 
       r = false;
@@ -144,7 +145,7 @@ function checkIfAllSmaller(arr, max) {
   });
   return r;
 }
-console.log(checkIfAllSmaller(arr1, 5));
+console.log(checkIfAllSmaller(arr1, 1));
 
 
 
