@@ -7,28 +7,9 @@
     <title>DOM praktika</title>
   </head>
   <body>
-    <table id="age-table">
-      <tr>
-        <td id="age">
-          <form action="?" id="form">
-            <label for="firstname">First name:</label>
-            <input type="text" id="firstname" name="firstname"><br>
-            <label for="lastname">Last name:</label>
-            <input type="text" id="lastname" name="lastname"><br>
-            <label for="email">Email:</label>
-            <input type="text" id="email" name="email"><br>
-            <input type="submit" value="Submit">
-          </form>
-        </td>
-      </tr>
-    </table>
-
-    <script>
-      console.log(document.getElementById('age-table'));
-      console.log(document.getElementById('age'));
-      console.log(document.getElementsByTagName('label'));
-      console.log(document.getElementById('form').children[1]);
-      console.log(document.getElementById('form').children[9]);
-    </script>
+    <input type="submit" id="button" value="copy">
+    <input type="text" id="enter-text" value="Text to copy" name="enter-text" readonly>
+    <input type="text" id="display" name="display">
+    <script src="app.js"></script>
   </body>
 </html>
