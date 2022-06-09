@@ -10,7 +10,7 @@
     <table id="age-table">
       <tr>
         <td id="age">
-          <form action="?">
+          <form action="?" id="form">
             <label for="firstname">First name:</label>
             <input type="text" id="firstname" name="firstname"><br>
             <label for="lastname">Last name:</label>
@@ -27,8 +27,8 @@
       console.log(document.getElementById('age-table'));
       console.log(document.getElementById('age'));
       console.log(document.getElementsByTagName('label'));
-      console.log(document.getElementsByTagName('form').);
-      console.log(document.getElementsByTagName('form').children[4]);
+      console.log(document.getElementById('form').children[1]);
+      console.log(document.getElementById('form').children[9]);
     </script>
   </body>
 </html>
