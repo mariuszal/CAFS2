@@ -7,9 +7,99 @@
     <title>DOM praktika</title>
   </head>
   <body>
-    <button id="button" value="copy">click to copy</button>
-    <input type="text" id="text" value="Text to copy" name="text" readonly>
-    <input type="text" id="display" name="display">
+    <h1 class="calcResult"></h1>
+    <!-- ##################################### -->
+
+    <div class="calculator">
+
+      <input type="text" class="screen" value="" disabled>
+      
+      <div class="keys">
+        
+        <button type="button" class="operator" value="+">+</button>
+        <button type="button" class="operator" value="-">-</button>
+        <button type="button" class="operator" value="*">x</button>
+        <button type="button" class="operator" value="/">/</button>
+        <br>
+        <button type="button" value="7">7</button>
+        <button type="button" value="8">8</button>
+        <button type="button" value="9">9</button>
+        <br>
+    
+        <button type="button" value="4">4</button>
+        <button type="button" value="5">5</button>
+        <button type="button" value="6">6</button>
+        <br>
+    
+        <button type="button" value="1">1</button>
+        <button type="button" value="2">2</button>
+        <button type="button" value="3">3</button>
+        <br>
+    
+        <button type="button" value="0">0</button>
+        <button type="button" class="decimal" value=".">.</button>
+        <button type="button" class="all-clear" value="all-clear">AC</button>
+        <br>
+        <button type="button" class="equal-sign operator" value="=">=</button>
+    
+      </div>
+    </div>
+
+
+    <!-- ##################################### -->
+    
+    <!-- 
+
+function subtraction (num1, num2) {
+  return num1 - num2;
+}
+
+function multiplication (num1, num2) {
+  return num1 * num2;
+}
+
+function division (num1, num2) {
+  return num1 / num2;
+}
+
+function calculateValue (num1, num2, action) {
+  if (Number.isInteger(num1) || Number.isInteger(num2)) {
+
+    switch (action) {
+        case 'addition':
+            return addition (num1, num2);
+            break;
+        case 'subtraction':
+            return subtraction (num1, num2);
+            break;
+        case 'multiplication':
+            return multiplication (num1, num2);
+            break;
+        case 'division':
+            return division (num1, num2);
+            break;    
+        default:
+            return false;
+    }
+  } else {
+    return false;
+  }  
+}
+console.log(calculateValue(2, 4, 'addition'));
+console.log(calculateValue(4, 5, 'subtraction'));
+console.log(calculateValue(8, 4, 'multiplication'));
+console.log(calculateValue(6, 2, 'division'));
+
+
+
+      // const param = document.getElementById("calcResult");
+      // function displayDimensions(event) {
+      //   param.innerText = `plotis: ${window.innerWidth} \naukstis: ${window.innerHeight} `;
+      // }
+      // window.addEventListener("resize", displayDimensions);
+      // param.innerText = `plotis: ${window.innerWidth} \naukstis: ${window.innerHeight} `;
+    </script> -->
+ 
     <script src="app.js"></script>
   </body>
 </html>
