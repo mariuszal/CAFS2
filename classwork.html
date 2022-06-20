@@ -3,31 +3,52 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>classwork 21</title>
+    <title>classwork</title>
+    <link rel="stylesheet" href="app.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
   </head>
   <body>
-
-    <!-- <script>
-      const styles = [
-        'jazz',
-        'blues',
-      ];
-      console.log(styles);
-
-      styles.push('rock-n-roll');
-      console.log(styles);
-
-      styles[1] = 'classics';
-      console.log(styles);
-
-      console.log(styles.shift());
-      console.log(styles);
-
-      styles.unshift('rap', 'reggae');
-      console.log(styles);
-
-    </script> -->
-<script src="app.js"></script>
+    <header>
+      <nav>
+        <div class="topnav" id="mainMenu">
+          <a href="#home" class="active">Home</a>
+          <a href="#about_Us">About Us</a>
+          <a href="#articles">Articles</a>
+          <a href="#links">Links</a>
+          <a href="#contacts">Contacts</a>
+          <a href="#" style="font-size:15px;" id="menuBtn" class="icon">&#9776;</a>
+        </div>
+        
+      </nav>
+    </header>
+    <main>
+      <section>
+        <div>
+          <img src="" class="randomImg">
+        </div>
+      </section>
+      <section height="300px">
+        <div id="time"></div>
+      </section>
+      <section>
+        <div class="container mb-3">
+          <form>
+              <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name">
+              </div>
+              <div class="mb-3">
+                  <label for="comment" class="form-label">Comment</label>
+                  <input type="text" class="form-control" id="comment">
+              </div>
+              <button type="submit" class="btn btn-primary" id="button">Submit</button>
+            </form>
+      </div>
+      <div class="container" id="msg">
+      </div>
+      </section>
+    </main>
+    <footer></footer>
+<script src="app2.js"></script>
   </body>
 </html>
