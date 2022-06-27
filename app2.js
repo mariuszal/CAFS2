@@ -28,7 +28,7 @@ class Products {
     }
 
     getSalePrice() {
-        if(this.salePrice === 0) {
+        if(this.salePrice === this.price) {
             return false;
         } else {
             return this.salePrice;
@@ -43,22 +43,48 @@ class Products {
         }
     }
 
-    filterByPrice() {
-        
-    }
+    
     
   }
+
+function filterByPrice(product, min, max) {
+    if(min === 0 && max === 0 || min === undefined && max === undefined) {
+        return product;
+    } else if(min === 0 || min === undefined) {
+        return product.filter( (product) => { return product.price <= max;});
+    } else if(max === undefined) {
+        return product.filter( (product) => { return product.price >= min;});
+    } else {
+        return product.filter( (product) => {return product.price >= min && product.price <= max;});
+    }
+}
+
+function filterByCategory(product, category) {
+    if(category === undefined || category === '') {
+        return product;
+    } else {
+        return product.filter( (product) => { return product.categoryName === category});   
+    }
+}
+
+function filterByDiscount(product) {
+    return product.filter( (product) => { return product.getSalePrice();} );
+}
 
 const currentProducts = [
     new Products('Nike', 59, 59, 'Shoes'),
     new Products('Puma', 10, 6, 'Sweater'),
     new Products('Reebok', 15, 12, 'T-Shirt'),
-    new Products('Puma', 26, 26, 'Pants'),
+    new Products('Puma', 26, 22, 'Pants'),
     new Products('Fila', 99, 99, 'Shoes'),
 ];
+
 
 console.log(currentProducts);
 console.log(currentProducts[0].getProductNameWithPrice());
 console.log(currentProducts[1].getProductNameWithPrice());
+console.log(filterByPrice(currentProducts, 60, 100));
+console.log(filterByCategory(currentProducts, 'Shoes'));
+console.log(filterByDiscount(currentProducts));
 console.log(`${currentProducts[0].name} ${currentProducts[0].category} nuolaida:${currentProducts[0].getDiscountPercents()}%`);
 console.log(`${currentProducts[1].name} ${currentProducts[1].category} nuolaida:${currentProducts[1].getDiscountPercents()}%`);
