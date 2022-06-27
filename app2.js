@@ -9,15 +9,14 @@ class Products {
     constructor(name, price, salePrice, category) {
       this.name = name;
       this.price = price;
-      (!salePrice.length) ? this.salePrice = salePrice : this.salePrice = this.salePrice = 0;
       this.salePrice = salePrice;
       this.category = category;
-      this.categoryName = category;
+      if(allCategorys.includes(category)) { 
+          this.categoryName = category;
+      } else {
+      this.categoryName = undefined;
+      }
     }
-
-    // if(this.allCategorys.includes(this.category)){
-    //     console.log('yra');
-    // }
 
     getProductNameWithPrice() {
         if(this.salePrice === this.price) {
@@ -36,10 +35,10 @@ class Products {
     }
 
     getDiscountPercents() {
-        if(this.salePrice === 0) {
-            return false;
+        if(this.salePrice === this.price) {
+            return `nera nuolaidos`;
         } else {
-            return ((this.price - this.salePrice)/this.price * 100);
+            return `nuolaida ${((this.price - this.salePrice)/this.price * 100)}%`;
         }
     }
 
@@ -55,7 +54,7 @@ function filterByPrice(product, min, max) {
     } else if(max === undefined) {
         return product.filter( (product) => { return product.price >= min;});
     } else {
-        return product.filter( (product) => {return product.price >= min && product.price <= max;});
+        return product.filter( (product) => { return product.price >= min && product.price <= max;});
     }
 }
 
@@ -86,5 +85,5 @@ console.log(currentProducts[1].getProductNameWithPrice());
 console.log(filterByPrice(currentProducts, 60, 100));
 console.log(filterByCategory(currentProducts, 'Shoes'));
 console.log(filterByDiscount(currentProducts));
-console.log(`${currentProducts[0].name} ${currentProducts[0].category} nuolaida:${currentProducts[0].getDiscountPercents()}%`);
-console.log(`${currentProducts[1].name} ${currentProducts[1].category} nuolaida:${currentProducts[1].getDiscountPercents()}%`);
+console.log(`${currentProducts[0].name} ${currentProducts[0].category} ${currentProducts[0].getDiscountPercents()}`);
+console.log(`${currentProducts[1].name} ${currentProducts[1].category} ${currentProducts[1].getDiscountPercents()}`);
