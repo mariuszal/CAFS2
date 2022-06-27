@@ -1,36 +1,46 @@
-class Animal {
-  constructor(name, sound = null) {
-      this.name = name;
-      this.sound = this.sound
-      this.created = Date.now();
+class Car {
+  constructor(make, model, year) {
+      this.make = make;
+      this.model = model;
+      this.year = year;
   }
 
-  getSound() {
-    return this.sound;
+  getIntroduction() {
+      return `Marke:${this.make} Modelis:${this.model}`
   }
-}
-class Rabbit extends Animal {
-  constructor(name) {
-      super(name);   
-  }
-}
-class Cat extends Animal {
-  constructor(name) {
-      super(name, 'Miau');
-  }
-}
-class Dog extends Animal {
-  constructor(name) {
-      super(name, 'Au Au Au');
+
+  getAge(){
+      const date = new Date();
+      const year = date.getFullYear();
+      let r = '';
+      if((year - this.year) <= 10) {
+        r = '10 metu arba naujesnis';
+      } else {
+        r = '11 metu arba senesnis';
+      }
+      return r;
   }
 }
 
-let animals = [
-  new Rabbit('baltas', 'ttttt'),
-  new Cat('pukis'),
-  new Dog('reksas'),
-];
+class Motorcycle extends Car {
+  constructor(make, model, year, wheels) {
+      super(make, model, year);
+      this.wheels = wheels;
+  }
 
-for(let a of animals) {
-  console.log(a.name, a.getSound());
+  getWheelsNumber() {
+      if (this.wheels == 3) {
+          return 'motociklas turi 3 ratus'
+      } else if (this.wheels == 2) {
+          return 'motociklas turi 2 ratus'
+      }else{
+          return 'manau tai nemotociklas....'
+      }
+  }
+
 }
+const golfas = new Car('VW', 'Golf', 2006);
+const harley = new Motorcycle('Harley-Davidson', 'Street', 2013, 2)
+console.log(harley.getWheelsNumber());
+console.log(golfas.getIntroduction());
+console.log(golfas.getAge());
