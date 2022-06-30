@@ -1,13 +1,189 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DOM praktika</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><< atsiskaitomasis darbas >></title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  <style>
+    .bg-change {
+        width: 200px;
+        height: 250px;
+        background: url("https://i.imgur.com/0DElr0H.jpg") no-repeat;
+        display: inline-block;
+    }
+    .bg-change:hover {
+        background: url("https://i.imgur.com/PLDVxza.jpg") no-repeat;
+    }
+   
+  </style>
   </head>
   <body>
+    <div class="container-lg">
+      <!-- ALERT CARD -->
+      <div class="card mb-2">
+        <div class="card-header">
+          Paspaudus mygtuką iškvieskite <span class="text-danger">alert('hello world')</span> 
+        </div>
+        <div class="card-body text-center">
+          <button class="btn btn-primary" id="alert-btn">Click on me</button>
+        </div>
+      </div>
+<!-- LOWER UPPER CASE CARD -->
+      <div class="card mb-2">
+        <div class="card-header">
+          Įvestai reikšmei priklausomai nuo paspausto mygtuko keičiame registrą (Didelės/Mažos raidės)
+        </div>
+        <div class="card-body text-center">
+          <div class="input-group">
+            <input type="text" class="form-control" id="inpute-case-change" placeholder="Fill me in">
+            <button class="btn btn-outline-secondary" id="to-upper-case" type="to-upper-case">To Upper Case</button>
+            <button class="btn btn-outline-secondary" id="to-lower-case" type="button">To Lower Case</button>
+            <button class="btn btn-outline-secondary" id="first-upper-case" type="button">First Upper Case</button>
+            <button class="btn btn-outline-secondary" id="first-lower-case" type="button">First Lower Case</button>
+          </div>
+        </div>
+      </div>
+<!-- INPUT FORM CARD -->
+      <div class="card mb-2">
+        <div class="card-header">
+          Paspaudus mygtuką patikrinkite įvestas reikšmes ir jeigu reikia parodykite klaidų pranešimus
+          <ul>
+            <li>element show/hide</li>
+            <li>class add/remove</li>
+          </ul>  
+        </div>
+        <div class="card-body text-center">
+          <form class="row g-3 needs-validation" novalidate>
+            <div class="col-md-6">
+              <label for="validationCustom01" class="form-label">Email</label>
+              <input type="text" class="form-control" id="validationCustom01" placeholder="Enter Email" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+              <div class="invalid-feedback">
+                Please provide a valid Email.
+              </div>
+            </div>
+           
+            <div class="col-md-6">
+              <label for="validationCustom05" class="form-label">Phone Number</label>
+              <input type="text" class="form-control" id="validationCustom05" placeholder="Enter Phone" required>
+              <div class="valid-feedback">
+                Looks good!
+              </div>
+              <div class="invalid-feedback">
+                Please provide a valid Phone Number.
+              </div>
+            </div>
+            
+            <div class="col-12">
+              <button class="btn btn-primary" type="submit">save</button>
+            </div>
+          </form>
+        </div>
+      </div>
+<!-- BLOCK UNBLOCK INPUT CARD -->
+      <div class="card mb-2">
+        <div class="card-header">
+          Paspaudus mygtuką užblokuokite/atblokuokite <span class="text-danger">input</span> 
+        </div>
+        <div class="card-body text-center">
+          <div class="input-group mb-3">
+            <button class="btn btn-outline-danger" type="button" id="button-block">Block</button>
+            <input type="text" class="form-control" id="block-unblock-inpute" placeholder="I'm input! You can try to enter something...">
+            <button class="btn btn-outline-success" type="button" id="button-unblock">UnBlock</button>
+          </div>
+        </div>
+      </div>
+<!-- BG IMG CARD -->
+      <div class="card mb-2">
+        <div class="card-header">
+          Užvedus ant paveiksliuko pakeiskite jį
+          <ul>
+            <li><a href="https://i.imgur.com/PLDVxza.jpg">https://i.imgur.com/PLDVxza.jpg</a></li>
+            <li><a href="https://i.imgur.com/0DElr0H.jpg">https://i.imgur.com/0DElr0H.jpg</a></li>
+          </ul>
+        </div>
+        <div class="card-body text-center">
+          <div class="bg-change"></div>
+        </div>
+      </div>
+<!-- TEXT DECORATION CARD -->
+      <div class="card mb-2">
+        <div class="card-header">Paspaudus ant mygtuko turi "iškristi" meniu su punktais. Paspaudus punktą turi įvykti veiksmas</div>
+        <div class="row p-3">
+            <p id="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos a id quibusdam quod voluptate mollitia amet.
+              <p class="text-end text-secondary">- Someone famous in Source Title</p>
+            </p>
+        </div>
+        <div class="row p-3">
+            <div class="col-1 btn-group" role="group">
+                <button id="btnCursors" type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Cursors</button>
+                <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                    <li><a id="pointer" class="dropdown-item" href="">Pointer</a></li>
+                    <li><a id="text-cursor" class="dropdown-item" href="">Text</a></li>
+                    <li><a id="copy" class="dropdown-item" href="">Copy</a></li>
+                    <li><a id="help" class="dropdown-item" href="">Help</a></li>
+                    <li><a id="crosshair" class="dropdown-item" href="">Crosshair</a></li>
+                </ul>
+            </div>
+            <div class="col-1 btn-group" role="group">
+                <button id="btnColor" type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Color</button>
+                <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                    <li><a id="red-color" class="dropdown-item" href="">Red</a></li>
+                    <li><a id="green-color" class="dropdown-item" href="">Green</a></li>
+                    <li><a id="blue-color" class="dropdown-item" href="">Blue</a></li>
+                </ul>
+            </div>
+            <div class="col-1 btn-group" role="group">
+                <button id="btnBorders" type="button" class="btn btn-danger dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Borders</button>
+                <ul class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                    <li><a id="red-border" class="dropdown-item" href="">Red</a></li>
+                    <li><a id="green-border" class="dropdown-item" href="">Green</a></li>
+                    <li><a id="blue-border" class="dropdown-item" href="">Blue</a></li>
+                </ul>
+            </div>
+            <div class="col-2 btn-group" role="group">
+                <button id="reset-all" type="button" class="btn btn-success">Reset All</button>
+            </div>
+        </div>
+
+    </div>
+
+<!-- MODAL CARD -->
+      <div class="card mb-2">
+        <div class="card-header">
+          Paspaudus mygtuką parodykite informaciją apie save modalineme lange
+        </div>
+        <div class="card-body text-center">
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Launch modal
+          </button>
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  ...
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                  <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
     
-    <script src="app2.js"></script>
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
   </body>
 </html>
+

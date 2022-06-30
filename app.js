@@ -1,46 +1,137 @@
-class Car {
-  constructor(make, model, year) {
-      this.make = make;
-      this.model = model;
-      this.year = year;
-  }
+// ALERT
+let alertButton = document.getElementById('alert-btn');
+  alertButton.addEventListener('click', function(e) {
+  alert('hello world!!');
+});
 
-  getIntroduction() {
-      return `Marke:${this.make} Modelis:${this.model}`
-  }
 
-  getAge(){
-      const date = new Date();
-      const year = date.getFullYear();
-      let r = '';
-      if((year - this.year) <= 10) {
-        r = '10 metu arba naujesnis';
-      } else {
-        r = '11 metu arba senesnis';
+
+// UPPER LOWER CASE
+let changeCase = document.querySelector('#inpute-case-change');
+document.querySelector('#to-upper-case')?.addEventListener('click', (e) => {
+  e.preventDefault();
+  console.log(changeCase.value);
+  changeCase.value = changeCase.value.toUpperCase();
+});
+document.querySelector('#to-lower-case')?.addEventListener('click', (e) => {
+  e.preventDefault();
+  console.log(changeCase.value);
+  changeCase.value = changeCase.value.toLowerCase();
+});
+document.querySelector('#first-upper-case')?.addEventListener('click', (e) => {
+  e.preventDefault();
+  console.log(changeCase.value);
+  changeCase.value = changeCase.value.charAt(0).toUpperCase() + changeCase.value.slice(1);
+});
+document.querySelector('#first-lower-case')?.addEventListener('click', (e) => {
+  e.preventDefault();
+  console.log(changeCase.value);
+  changeCase.value = changeCase.value.charAt(0).toLowerCase() + changeCase.value.slice(1);
+});
+
+
+
+// BLOCK UNBLOCK INPUT
+let blockUnblockInpute = document.querySelector('#block-unblock-inpute');
+document.querySelector('#button-block')?.addEventListener('click', (e) => {
+  blockUnblockInpute.disabled = true;
+});
+let blockUnblockInpute2 = document.querySelector('#block-unblock-inpute');
+document.querySelector('#button-unblock')?.addEventListener('click', (e) => {
+  blockUnblockInpute2.disabled = false;
+});
+
+
+
+// FORM VALIDATION 
+(() => {
+ const forms = document.querySelectorAll('.needs-validation')
+
+  Array.from(forms).forEach(form => {
+    form.addEventListener('submit', event => {
+      if (!form.checkValidity()) {
+        event.preventDefault()
+        event.stopPropagation()
       }
-      return r;
-  }
-}
 
-class Motorcycle extends Car {
-  constructor(make, model, year, wheels) {
-      super(make, model, year);
-      this.wheels = wheels;
-  }
+      form.classList.add('was-validated')
+    }, false)
+  })
+})()
 
-  getWheelsNumber() {
-      if (this.wheels == 3) {
-          return 'motociklas turi 3 ratus'
-      } else if (this.wheels == 2) {
-          return 'motociklas turi 2 ratus'
-      }else{
-          return 'manau tai nemotociklas....'
-      }
-  }
 
-}
-const golfas = new Car('VW', 'Golf', 2006);
-const harley = new Motorcycle('Harley-Davidson', 'Street', 2013, 2)
-console.log(harley.getWheelsNumber());
-console.log(golfas.getIntroduction());
-console.log(golfas.getAge());
+
+// TEXT AND BORDER DECOTARION 
+let resetAll = document.querySelector('#reset-all');
+
+let pointer = document.querySelector('#pointer');
+let textCursor = document.querySelector('#text-cursor');
+let copy = document.querySelector('#copy');
+let help = document.querySelector('#help');
+let crosshair = document.querySelector('#crosshair');
+let changeText = document.querySelector('#text');
+let redColor = document.querySelector('#red-color');
+let greenColor = document.querySelector('#green-color');
+let blueColor = document.querySelector('#blue-color');
+let redBorder = document.querySelector('#red-border');
+let greenBorder = document.querySelector('#green-border');
+let blueBorder = document.querySelector('#blue-border');
+// cursor
+pointer?.addEventListener('click', function(e) {
+  e.preventDefault();
+  document.body.style.cursor = 'pointer';
+  console.log('POINTER');
+});
+textCursor?.addEventListener('click', function(e) {
+  e.preventDefault();
+  document.body.style.cursor = 'text';
+  console.log('TEXT');
+});
+copy?.addEventListener('click', function(e) {
+  e.preventDefault();
+  document.body.style.cursor = 'copy';
+  console.log('COPY');
+});
+help?.addEventListener('click', function(e) {
+  e.preventDefault();
+  document.body.style.cursor = 'help';
+  console.log('HELP');
+});
+crosshair?.addEventListener('click', function(e) {
+  e.preventDefault();
+  document.body.style.cursor = 'crosshair';
+  console.log('CROSSHAIR');
+});
+// color
+redColor?.addEventListener('click', function(e) {
+    e.preventDefault();
+    changeText.style.color = 'red';
+});
+greenColor?.addEventListener('click', function(e) {
+    e.preventDefault();
+    changeText.style.color = 'green';
+});
+blueColor?.addEventListener('click', function(e) {
+    e.preventDefault();
+    changeText.style.color = 'blue';
+});
+// border
+redBorder?.addEventListener('click', function(e) {
+    e.preventDefault();
+    changeText.style.outline = '1px solid red';
+});
+greenBorder?.addEventListener('click', function(e) {
+    e.preventDefault();
+    changeText.style.outline = '1px solid green';
+});
+blueBorder?.addEventListener('click', function(e) {
+    e.preventDefault();
+    changeText.style.outline = '1px solid blue';
+});
+// reset
+resetAll?.addEventListener('click', function(e) {
+    e.preventDefault();
+    changeText.style.color = 'black';
+    changeText.style.outline = 'none';
+    document.body.style.cursor = 'auto';
+})
