@@ -134,4 +134,4 @@ resetAll?.addEventListener('click', function(e) {
     changeText.style.color = 'black';
     changeText.style.outline = 'none';
     document.body.style.cursor = 'auto';
-})
+});
