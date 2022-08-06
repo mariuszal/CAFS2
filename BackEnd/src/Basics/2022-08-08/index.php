@@ -11,16 +11,18 @@ require('functions.php');
 </head>
 <body>
     <form action="app.php" method="POST">
-        <p>Vardas: <input type="text" name="firstName" value="marius"></p>
-        <p>Pavarde: <input type="text" name="lastName" value="zal"></p>
+        <p>Vardas: <input type="text" name="firstName" value="" required></p>
+        <p>Pavarde: <input type="text" name="lastName" value="" required></p>
         <p>Miestas: 
-            <select name="city">
+            <select name="city" required>
                 <option value="">-</option>
-                <?php echo optionFunction($cities); ?>
+                <? echo optionFunction($cities); ?>
             </select></p>
         <p><strong>Programavimo kalbos: </strong></p>
         <p>
-            <?echo checkBoxFunction('languageCode', $codingLanguages, 0);?>
+            <?
+            //checkBoxFunction('<checkbox_name>', <array_to_select>, <0 - checkbox before text, 1> - checkbox after text>);
+            echo checkBoxFunction('languageCode', $codingLanguages, 0);?>
         </p>
         <p><textarea name="about" cols="30" rows="4" placeholder="Pvz: patirtis su C++"></textarea></p>
         <p><button>submit</button></p>
