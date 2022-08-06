@@ -13,4 +13,8 @@ router.get('/places/find/:name', function(req, res, next) {
 	});
 });
 
+router.get('/places/:code/forecasts', function(req, res, next) {
+	MeteoApiService.loadPlaceForecasts(req.params.code).then(forecasts => res.json(forecasts))
+});
+
 module.exports = router;
