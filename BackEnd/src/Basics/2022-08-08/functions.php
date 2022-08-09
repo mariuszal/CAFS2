@@ -1,5 +1,9 @@
 <?php
 require('data.php');
+function dd(mixed $value): void{
+    dump($value);
+    exit();
+}
 
 function optionFunction($arr) {
     $r = '';
@@ -42,8 +46,10 @@ function generateRandomString($length = 10) {
 }
 
 function uploadFile($file) {
-define('UPLOAD_DIR', dirname(__FILE__) . '/uploads');
+$dirForUploads = '/uploads';
+define('UPLOAD_DIR', dirname(__FILE__) . $dirForUploads);
 define('ALLOWED_EXTENSIONS', ['png', 'jpg', 'jpeg']);
+ $r = date('Y/m/d');
 
 	if ($file['error'] == UPLOAD_ERR_OK) {
 		$ext = pathinfo($file['name'], PATHINFO_EXTENSION);
@@ -63,10 +69,11 @@ define('ALLOWED_EXTENSIONS', ['png', 'jpg', 'jpeg']);
 
 		do {
 			$name = generateRandomString(16);
-
 			$path = sprintf('%s/%s.%s', $path, $name, $ext);
 		} while (file_exists($path));
-
+        
 		move_uploaded_file($file['tmp_name'], $path);
+        $r = "<br><img src=\"{$dirForUploads}/{$r}/{$name}.{$ext}\">";
 	}
+    return $r;
 }
