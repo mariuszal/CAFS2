@@ -32,7 +32,6 @@ function checkBoxFunction($inputeName, $arr, $checkboxPosiotion) {
     return $r;
 }
 
-
 function generateRandomString($length = 10) {
     $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
     $charactersLength = strlen($characters);
@@ -73,7 +72,7 @@ define('ALLOWED_EXTENSIONS', ['png', 'jpg', 'jpeg']);
 		} while (file_exists($path));
         
 		move_uploaded_file($file['tmp_name'], $path);
-        $r = "<br><img src=\"{$dirForUploads}/{$r}/{$name}.{$ext}\">";
-	}
+        $r = "<br><img src=\".{$dirForUploads}/{$r}/{$name}.{$ext}\">";
+    }
     return $r;
 }

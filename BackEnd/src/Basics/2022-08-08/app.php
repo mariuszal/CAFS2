@@ -11,8 +11,7 @@ if(isset($_POST)) {
         if (isset($_FILES['some-file-name'])) {
             $file = $_FILES['some-file-name'];
             echo uploadFile($file);
-            // var_dump($file);
-        
+            
      }
     }
 }
