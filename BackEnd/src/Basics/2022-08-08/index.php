@@ -10,7 +10,7 @@ require('functions.php');
     <title>Document</title>
 </head>
 <body>
-    <form action="app.php" method="POST">
+    <form action="app.php" method="POST" enctype="multipart/form-data">
         <p>Vardas: <input type="text" name="firstName" value="" required></p>
         <p>Pavarde: <input type="text" name="lastName" value="" required></p>
         <p>Miestas: 
@@ -25,6 +25,7 @@ require('functions.php');
             echo checkBoxFunction('languageCode', $codingLanguages, 0);?>
         </p>
         <p><textarea name="about" cols="30" rows="4" placeholder="Pvz: patirtis su C++"></textarea></p>
+        <p><input type="file" name="some-file-name" require></p>
         <p><button>submit</button></p>
     </form>
 </body>
