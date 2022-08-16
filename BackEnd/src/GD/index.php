@@ -1,15 +1,30 @@
 <?php
 
-$text = $_GET['text'] ?? 'Hello World';
+// $text = $_GET['text'] ?? 'Hello World';
+$text = "help world";
  
-$image = imageCreate(300,75);
+$image = imagecreate(350,400);
+$photo = imagecreatefromjpeg('default.jpg');
 
-$color = imageColorAllocate($image, 200,200,200);
-$colorBlue = imageColorAllocate($image, 0,0,255);
+$margeRight = 10;
+$margeBottom = 10;
 
-imageString($image, 2, 10, 30, $text, $colorBlue);
+$photoWidth = imagesx($photo);
+$photoHeight = imagesy($photo);
+
+imagecopy($image,$photo,
+	imagesx($image) - $photoWidth - $margeRight,
+	imagesy($image) - $photoHeight - $margeBottom,
+	0,0,imagesx($photo),imagesy($photo));
+
+$color = imagecolorallocate($image, 200,200,200);
+$colorBlue = imagecolorallocate($image, 0,0,255);
+
+imagestring($image, 2, 30, 30, $text, $colorBlue);
+imagestring($image, 2, 30, 70, $text, $colorBlue);
 
 header('Content-type: image/jpeg');
-imageJpeg($image);
+imageJpeg($image, 'test.jpg');
 
-imageDestroy($image);
+imagedestroy($image);
+header('Location: test.jpg');
