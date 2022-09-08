@@ -1,9 +1,9 @@
 <?php
 
 class Vehicle {
-    public $make;
-    public $model;
-    public $year;
+    protected $make;
+    protected $model;
+    protected $year;
 
     function __construct(string $make, ?string $model, int $year)
     {

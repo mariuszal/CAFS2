@@ -8,7 +8,7 @@ class Plane extends Vehicle
         $this->setWheelsNumber($wheels);
     }
 
-    public function getFuelType()
+    public function getFuelType(): array
     {
         return [5];
     }

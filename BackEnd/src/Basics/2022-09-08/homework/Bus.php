@@ -8,7 +8,7 @@ class Bus extends Vehicle
         $this->setWheelsNumber($wheels);
     }
 
-    public function getFuelType()
+    public function getFuelType(): array
     {
         return [2, 3];
     }

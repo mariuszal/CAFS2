@@ -8,7 +8,7 @@ class MotorCycle extends Vehicle
         $this->setWheelsNumber($wheels);
     }
 
-    public function getFuelType()
+    public function getFuelType(): array
     {
         return [1, 2];
     }

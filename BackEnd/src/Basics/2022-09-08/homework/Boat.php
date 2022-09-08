@@ -12,7 +12,7 @@ class Boat extends Vehicle
         return "Cruiser";
     }
 
-    public function getFuelType()
+    public function getFuelType(): array
     {
         return [2];
     }
