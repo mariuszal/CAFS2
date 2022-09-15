@@ -1,10 +1,12 @@
 <?php
 
-require_once 'Inputs.php';
+namespace App\Classes;
+// use App\Traits\Inputs;
 
 class FormBuilder 
 {
-    use Inputs;
+    use \App\Traits\Inputs;
+    // use Inputs;
 
     public function open(string $action, string $method): string 
     {

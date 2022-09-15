@@ -1,7 +1,8 @@
 <?php
 
-require_once './Classes/FormBuilder.php';
-// use Builder\FormBuilder as Builder;
+require_once 'vendor/autoload.php';
+
+use App\Classes\FormBuilder;
  
 $form = new FormBuilder;
  

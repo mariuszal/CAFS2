@@ -1,5 +1,5 @@
 <?php
-// namespace Builder\Inputss;
+namespace App\Traits;
 
 trait Inputs 
 {
