@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title><?=env('APP_NAME', 'Coutching');?></title>
+    <link rel="stylesheet" href="./resources/css/main.css">
+    <link rel="stylesheet" href="./resources/css/list.css">
+    <link rel="stylesheet" href="./resources/css/navigation.css">
+    <link rel="stylesheet" href="./resources/css/user_add.css">
+  
+</head>
+<body>
+    <header>
+        <?php include_once './resources/views/nav.phtml'; ?>
+    </header>
+    <main>
+        <section class="error">
+            <?php
+            if (isset($_GET['error'])) {
+                echo  $_GET['error'];
+            }?>
+        </section>
+        <section>
+            <form action="user_create.php" method="POST">
+                <label>Vardas</label>
+                <input placeholder="įveskite vardą" type="text" name="first_name">
+
+                <label>Pavardė</label>
+                <input placeholder="įveskite pavardę" type="text" name="last_name">
+
+                <label>Email</label>
+                <input placeholder="įveskite email" type="text" name="email">
+
+                <label>Komentaras</label>
+                <textarea placeholder="įveskite aprašymą" type="text" name="short_description" rows="4" maxlength="1000">nebūtina</textarea>
+
+                <input type="submit" value="Įvesti">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <div id="footer">
+            <?=$footer;?>
+        </div>
+        
+    </footer>
+</body>
+</html>

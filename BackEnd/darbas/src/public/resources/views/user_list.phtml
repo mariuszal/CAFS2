@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title><?=env('APP_NAME', 'Coutching');?></title>
+    <link rel="stylesheet" href="./resources/css/main.css">
+    <link rel="stylesheet" href="./resources/css/list.css">
+    <link rel="stylesheet" href="./resources/css/navigation.css">
+    <link rel="stylesheet" href="./resources/css/user_list.css">
+    <style>
+        table {
+            text-align: center;
+            /* color:brown; */
+            font-size: 12px;
+            border-collapse: collapse;
+        }
+        tr:nth-of-type(1) {
+            background-color: lightblue;
+        }
+        th, td {
+            border: 1px solid #ddd;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color:lightblue;
+        }   
+    </style>
+</head>
+<body>
+    <header>
+        <?php include_once './resources/views/nav.phtml'; ?>
+    </header>
+    <main>
+        <section>
+            <?=adminMenu();?>
+        </section>
+        <section>
+            <table border=1 cellpadding=0 width=100%>
+                <tr>
+                <td>id</td>
+                <td width="60"> vardas </td>
+                <td width="100"> pavardė </td>
+                <td width="200"> email </td>
+                <td> kom. </td>
+                <td> nuoroda į apklausą </td>
+                <td> veiksmas </td>
+                </tr>
+                <?=userList();?>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <div id="footer">
+            <?=$footer;?>
+        </div>
+        
+    </footer>
+</body>
+
+</html>

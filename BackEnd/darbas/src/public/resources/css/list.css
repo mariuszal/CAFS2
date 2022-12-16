@@ -1,0 +1,71 @@
+#pagination{
+    text-align: left;
+    margin: 5px 0;
+  }
+  
+  #pagination > span{
+    display: inline-block;
+    padding: 10px;
+    text-decoration: none;
+  }
+  
+  #pagination > span{
+    border: 1px solid rgb(68, 94, 104); 
+    background-color: #fff;
+    color: rgb(68, 94, 104);
+    border-radius: 20px;
+  }
+  
+  #pagination > span.is-current-page{
+    background-color: rgb(68, 94, 104);
+    color: #fff;
+  }
+  
+  label {
+      margin-left: 15px;
+      line-height: 32px;
+      font-size: 12px;
+    }
+    
+    input {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    
+      border-radius: 50%;
+      width: 16px;
+      height: 16px;
+    
+      border: 2px solid #999;
+      transition: 0.2s all linear;
+      margin-right: 5px;
+    
+      position: relative;
+      top: 4px;
+    }
+    
+    input:checked {
+      border: 6px solid rgb(68, 94, 104);
+    }
+    
+    button,
+    legend {
+      color: white;
+      background-color: rgb(68, 94, 104);
+      padding: 5px 10px;
+      border-radius: 15px;
+      width: 200px;
+      border: 0;
+      font-size: 14px;
+    }
+    
+    button:hover,
+    button:focus {
+      color: #999;
+    }
+    
+    button:active {
+      background-color: white;
+      color: black;
+      outline: 1px solid rgb(68, 94, 104);
+    }

@@ -1,0 +1,48 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <title><? =env('APP_NAME', 'Coutching'); ?></title>
+        <link rel="stylesheet" href="./resources/css/main.css">
+        <link rel="stylesheet" href="./resources/css/navigation.css">
+        <style>
+            table {
+                text-align: center;
+                font-size: 12px;
+                border-collapse: collapse;
+            }
+            th, td {
+                border: 1px solid #ddd;
+            }
+            tr:nth-child(even) {
+                background-color: #f2f2f2;
+            }
+                   
+        </style>
+    </head>
+    <body>
+        <header>
+            <?php include_once './resources/views/nav.phtml'; ?>
+        </header>
+        <main>
+            <section>
+                <?=adminMenu();?>
+            </section>
+            <section>
+                <form action='user_action.php?update=<?=$user_id;?>' method="POST">
+                <table border="1">
+                <?=userEdit();?>
+                </table>
+                    <input type='submit' value='Įvesti'>
+                </form>
+            </section>
+        </main>
+        <footer>
+            <div id="footer">
+                <?=$footer;?>
+            </div>            
+        </footer>
+    </body>
+    </html>

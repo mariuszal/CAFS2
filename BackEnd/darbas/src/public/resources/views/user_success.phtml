@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title><?=env('APP_NAME', 'Coutching');></title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/list.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <style>
+        main {
+            position: relative;
+            text-align: center;
+        }
+        #success{
+            display: inline-block;
+            position: absolute;
+            top: 150px;
+            left: 300px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+    <div id="header">
+        <?php echo "{$user['first_name']} | {$user_id} | {$user['email']}"; ?>
+        </div>
+    </header>
+    <main>
+        <section id="success">
+            <?=userInfo();?>
+        </section>
+    </main>
+    <footer>
+        <div id="footer">
+            <?=$footer;?>
+        </div>
+        
+    </footer>
+</body>
+</html>

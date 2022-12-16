@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title><?=env('APP_NAME', 'Coutching'); ?></title>
+    <link rel="stylesheet" href="./resources/css/main.css">
+    <link rel="stylesheet" href="./resources/css/list.css">
+    <link rel="stylesheet" href="./resources/css/navigation.css">
+    <style>
+        table {
+            text-align: center;
+            font-size: 12px;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ddd;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color:lightblue;
+        }        
+    </style>
+</head>
+<body>
+    <header>
+        <?php include_once './resources/views/nav.phtml'; ?>
+    </header>
+    <main>
+        <section>
+            <?=adminMenu();?>
+        </section>
+        <section>
+    <table border="1">
+        <?=userInfo();?>
+         <?=userAnswers();?>
+        <??>
+    </table>
+    </section>
+    </main>
+    <footer>
+        <div id="footer">
+            <?=$footer;?>
+        </div>
+        
+    </footer>
+</body>
+</html>
